@@ -8,7 +8,7 @@ COPY . .
 
 # Replace application.properties (optional, if you have a custom one)
 RUN rm -f src/main/resources/application.properties && \
-    cp -f application.properties src/main/resources/application.properties
+    cp -f backend/application.properties src/main/resources/application.properties
 
 # Build the app (skip tests to avoid build failure)
 RUN mvn clean package -DskipTests
